@@ -1,34 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Blog preview card</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Blog preview card</title>
 
-  Learning
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @font-face {
+        font-family: "Figtree-italic";
+        src: url("./assets/fonts/Figtree-Italic-VariableFont_wght.ttf") format("woff2");
+        font-style: normal;
+      }
 
-  Published 21 Dec 2023
+      @font-face {
+        font-family: "Figtree";
+        src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format("woff2");
+        font-style: normal;
+      }
 
-  HTML & CSS foundations
 
-  These languages are the backbone of every website, defining structure, content, and presentation.
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(47, 88%, 63%);
+        width: 1440px;
+        height: 960px;
 
-  Greg Hooper
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        p {
+          font-size: 16px;
+          font-family: Figtree;
+        }
+
+        .card {
+          max-width: 340px;
+          background-color: #ffff;
+          padding: 20px;
+          padding-bottom: 10px;
+          border-radius: 15px;
+          border-color: #000000;
+          border: 0.5px solid;
+          box-shadow: 8px 8px 0px 0.5px rgba(1, 1, 0.2);
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
+
+          img {
+            border-radius: 10px;
+            width: 100%;
+          }
+
+          .link:hover {
+            color: hsl(47, 88%, 63%);
+          }
+
+          .user-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2px;
+
+            p {
+              font-weight: 800;
+              font-size: 14px;
+            }
+
+            img {
+              width: 30px;
+              margin-right: 10px;
+            }
+          }
+        }
+
+        .attribution {
+          font-size: 11px;
+          text-align: center;
+        }
+        .attribution a {
+          color: hsl(228, 45%, 44%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div role="main" class="main">
+      <div class="card">
+        <img src="./assets/images/illustration-article.svg" alt="" />
+        <p style="padding: 5px 12px; margin: 0px; margin-top: 25px; font-weight: 800; background-color: hsl(47, 88%, 63%); border-radius: 5px">
+          Learning
+        </p>
+        <p style="font-size: 15px;">Published 21 Dec 2023</p>
+        <p style="font-weight: 800; font-size: 25px; margin: 0px;" class="link">HTML & CSS foundations</p>
+        <p style="line-height: 1.6; margin-bottom: 10px;">These languages are the backbone of every website, defining structure, content, and presentation.</p>
+        <div class="user-container">
+          <img src="./assets/images/image-avatar.webp" alt="" />
+          <p>Greg Hooper</p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
